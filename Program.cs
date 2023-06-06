@@ -8,11 +8,8 @@ class Program
     public const int NUM_OF_WORKING_DAYS = 20;
     static void Main(string[] args)
     {
-        
-
+  
         int emphrs = 0, empWage = 0, totalEmpWage = 0;
-
-
         for (int day = 0; day <NUM_OF_WORKING_DAYS; day++)
         {
             Random random = new Random();
