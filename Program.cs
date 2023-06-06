@@ -5,7 +5,7 @@ class Program
     public const int Is_PART_TIME = 1;
     public const int Is_FULL_TIME = 2;
     public const int EMP_RATE_PER_HOUR = 20;
-    public const int NUM_OF_WORKING_DAYS = 2;
+    public const int NUM_OF_WORKING_DAYS = 20;
     static void Main(string[] args)
     {
         
