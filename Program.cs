@@ -1,6 +1,6 @@
 using System;
 
-class Line : IComparable<Line>
+class Line
 {
     public double X1 { get; set; }
     public double Y1 { get; set; }
@@ -24,21 +24,6 @@ class Line : IComparable<Line>
         return length;
     }
 
-    public int CompareTo(Line other)
-    {
-        if (other == null)
-            return 1;
-
-        double thisLength = Length();
-        double otherLength = other.Length();
-
-        if (thisLength < otherLength)
-            return -1;
-        else if (thisLength > otherLength)
-            return 1;
-        else
-            return 0;
-    }
 }
 
 class Program
@@ -50,12 +35,12 @@ class Program
         Line line2 = new Line(x1, y1, x2, y2);
         Line line3 = new Line(x1, y1, x2, y2);
 
-        // Compare lines using CompareTo method
-        int comparison1 = line1.CompareTo(line2);
-        int comparison2 = line1.CompareTo(line3);
+        // Check equality using Equals method
+        bool areEqual1 = line1.Equals(line2);
+        bool areEqual2 = line1.Equals(line3);
 
         // Print the results
-        Console.WriteLine("Comparison result between line1 and line2: " + comparison1);
-        Console.WriteLine("Comparison result between line1 and line3: " + comparison2);
+        Console.WriteLine("Are line1 and line2 equal? " + areEqual1);
+        Console.WriteLine("Are line1 and line3 equal? " + areEqual2);
     }
 }
